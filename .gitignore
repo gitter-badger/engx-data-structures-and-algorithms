@@ -18,6 +18,13 @@ bin/
 .classpath
 .project
 
+# gradle
+.gradle/
+gradle/
+build/
+gradlew
+gradlew.bat
+
 # maven
 target/
 

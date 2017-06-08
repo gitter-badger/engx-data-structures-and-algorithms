@@ -1,0 +1,34 @@
+configure(allprojects) { project ->
+  apply plugin: 'java'
+
+  apply plugin: 'idea'
+  apply plugin: 'eclipse'
+
+  apply plugin: 'maven'
+
+  group 'com.stassarosek'
+  version '1.0-SNAPSHOT'
+
+  compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+  }
+
+  compileTestJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+  }
+
+  repositories {
+    mavenCentral()
+    mavenLocal()
+  }
+
+  task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+  }
+}
+
+configure(rootProject) {
+  description = 'EngX :: Data Structures and Algorithms'
+}
