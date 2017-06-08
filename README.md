@@ -1,1 +1,1 @@
-# EngX :: Data Structures and Algorithms
+# EngX :: Data Structures and Algorithms [![Build Status](https://travis-ci.org/StasSarosek/engx-data-structures-and-algorithms.svg?branch=master)](https://travis-ci.org/StasSarosek/engx-data-structures-and-algorithms)
