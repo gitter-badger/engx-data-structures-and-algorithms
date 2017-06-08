@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
  * @author Stas Sarosek (stas.sarosek@gmail.com)
  */
 public class Stack<T> implements Iterable<T> {
-  private Node first = null;
+  private Node<T> first = null;
   private int size = 0;
 
   public boolean isEmpty() {
@@ -22,8 +22,8 @@ public class Stack<T> implements Iterable<T> {
     if (item == null) {
       throw new NullPointerException();
     }
-    Node oldFirst = first;
-    first = new Node(item);
+    Node<T> oldFirst = first;
+    first = new Node<>(item);
     first.next = oldFirst;
     size++;
   }
@@ -41,7 +41,7 @@ public class Stack<T> implements Iterable<T> {
   @Override
   public Iterator<T> iterator() {
     return new Iterator<T>() {
-      private Node current = first;
+      private Node<T> current = first;
 
       @Override
       public boolean hasNext() {
@@ -58,14 +58,5 @@ public class Stack<T> implements Iterable<T> {
         return item;
       }
     };
-  }
-
-  private class Node {
-    private T item;
-    private Node next;
-
-    Node(T item) {
-      this.item = item;
-    }
   }
 }
